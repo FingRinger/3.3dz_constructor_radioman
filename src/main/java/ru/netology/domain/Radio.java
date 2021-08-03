@@ -1,5 +1,9 @@
 package ru.netology.domain;
 
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
+
 public class Radio {
     private int currentStation;
     private int maxStation = 10; // оно же желаемое кол-во станций
@@ -8,8 +12,7 @@ public class Radio {
     private int maxVolume = 100;
     private int minVolume = 0;
 
-    public Radio() {
-    }
+
 
     public Radio(int maxStation) {
         this.maxStation = maxStation;
