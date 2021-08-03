@@ -51,6 +51,18 @@ public class Radio {
         return maxStation;
     }
 
+    public int getMinStation() {
+        return minStation;
+    }
+
+    public int getMaxVolume() {
+        return maxVolume;
+    }
+
+    public int getMinVolume() {
+        return minVolume;
+    }
+
     public void nextStation() {
         if (currentStation >= maxStation) {
             currentStation = 0;

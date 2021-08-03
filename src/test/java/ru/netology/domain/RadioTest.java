@@ -1,17 +1,36 @@
 package ru.netology.domain;
 
+import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 public class RadioTest {
 
     @Test
-    public void defaultStation() {
+    public void defaultMaxStation() {
     Radio radio = new Radio();
     assertEquals(10,radio.getMaxStation());
     }
 
+    @Test
+    public void defaultMinStation() {
+        Radio radio = new Radio();
+        assertEquals(0,radio.getMinStation());
+    }
+
+    @Test
+    public void defaultMaxVolume() {
+        Radio radio = new Radio();
+        assertEquals(100,radio.getMaxVolume());
+    }
+
+    @Test
+    public void defaultMinVolume() {
+        Radio radio = new Radio();
+        assertEquals(0,radio.getMinVolume());
+    }
 
     @Test // устанавливаем радио - станцию (валидная станция)
     public void shouldInputStation() {
