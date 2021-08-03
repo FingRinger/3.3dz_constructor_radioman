@@ -10,8 +10,8 @@ public class RadioTest {
     @Test // устанавливаем радио - станцию (валидная станция)
     public void shouldInputStation() {
         Radio radio = new Radio();
-        radio.setCurrentStation(3); //валидная станция
-        assertEquals(3,radio.getCurrentStation());
+        radio.setCurrentStation(10); //валидная станция
+        assertEquals(10,radio.getCurrentStation());
     }
     @Test // устанавливаем радио - станцию (невалидная станция)
     public void shouldInputWrongStation() {
@@ -25,7 +25,7 @@ public class RadioTest {
     @Test // следующая станция после 11-ой - 0-ая
     public void shouldZeroAfterMaxStation() {
         Radio radio = new Radio();
-        radio.setCurrentStation(11);
+        radio.setCurrentStation(10);
         radio.nextStation();
         assertEquals(0, radio.getCurrentStation());
     }
@@ -35,7 +35,7 @@ public class RadioTest {
         Radio radio = new Radio();
         radio.setCurrentStation(9);
         radio.nextStation();
-        assertEquals(0, radio.getCurrentStation());
+        assertEquals(10, radio.getCurrentStation());
     }
 
     @Test // следующая станция после 9-ой - 0-ая
@@ -52,7 +52,7 @@ public class RadioTest {
         Radio radio = new Radio();
         radio.setCurrentStation(0);
         radio.prevStation();
-        assertEquals(9,radio.getCurrentStation());
+        assertEquals(10,radio.getCurrentStation());
     }
 
     @Test //
@@ -60,7 +60,7 @@ public class RadioTest {
         Radio radio = new Radio();
         radio.setCurrentStation(-63);
         radio.prevStation();
-        assertEquals(9,radio.getCurrentStation());
+        assertEquals(10,radio.getCurrentStation());
     }
 
     @Test
